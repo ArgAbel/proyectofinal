@@ -1,36 +1,50 @@
 .navbar {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     background-color: #333;
     color: white;
-    width: 100vw; 
+    width: 100%;
+    justify-content: space-around;
     position : fixed;
     top: 0;
+    height: 100px;
+  
+}
+@media (max-width: 480px) { 
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        display: none;
+    }
+  
 }
 nav input{
     display: none;
 } 
-.container nav ul{
+.navba ul{
     display: none;
 }
-input:checked ~ ul{
-    display: block;
-} 
-nav label {
-  display: inline-block;
-  border-radius: 5px;
-  width: 30px;
-  height: 10vh;
-  line-height: 30px;
+.navbar .nav-links {
+    display: flex;
+    justify-content: space-around;
+    
+    list-style: none;
+   
+}
+
+.navbar .nav-links .button {
+  line-height: 30px;  
   font-weight: bold;
   text-align: center;
   user-select: none;
-}
-.button {
+  cursor: pointer;
+
+  display: flex;
   position: relative;
-  padding: 16px 30px;
+   color:white;
   font-size: 1.5rem;
-  color: blue;
+  
   border: 2px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   text-shadow: 0 0 15px blue;
@@ -41,7 +55,7 @@ nav label {
   z-index: 1;
 }
 
-.button:hover {
+.nav-links:hover {
   color: #fff;
   border: 2px solid rgba(0, 0, 0, 0);
   box-shadow: 0 0 0px blue;
@@ -73,7 +87,7 @@ nav label {
   background: blue;
   pointer-events: none;
   border-radius: 2px;
-  box-shadow: 0 0 10px var(--color),
+  box-shadow: 0 0 10px blue,
     0 0 20px blue,
     0 0 30px blue,
     0 0 50px blue,
@@ -101,7 +115,7 @@ nav label {
 .button span:nth-child(2),
 .button span:nth-child(4) {
   width: 4px;
-  height: 40px;
+  height: 20px;
 }
 
 .button:hover span:nth-child(1),
@@ -131,7 +145,7 @@ nav label {
 
 .button span:nth-child(2) {
   left: calc(50% - 2px);
-  top: -50px;
+  top: -25px;
   transform-origin: top;
 }
 
@@ -141,7 +155,7 @@ nav label {
 
 .button span:nth-child(4) {
   left: calc(50% - 2px);
-  bottom: -50px;
+  bottom: -25px;
   transform-origin: bottom;
 }
 

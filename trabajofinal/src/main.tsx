@@ -13,7 +13,6 @@ createRoot(document.getElementById('root')!).render(
      <BotonNav nombre="intereses"/> 
      <BotonNav nombre="Servicios"/>
      <BotonNav nombre="contacto"/> 
-     <BotonNav nombre="Yamila"/> 
      </BarraNavegacion>  
     </StrictMode>
 )
